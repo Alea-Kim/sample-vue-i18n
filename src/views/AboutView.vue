@@ -15,6 +15,9 @@ body {
   padding: 30px;
   line-height: 2;
 }
+img {
+  max-width: 500px;
+}
 .about {
   min-height: 60vh;
   position: relative;
