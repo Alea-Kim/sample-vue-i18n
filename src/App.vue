@@ -4,29 +4,27 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <header>
-    <div class="wrapper">
-      <nav class="nav-inline">
-        <ol>
-          <li class="nav-inline blue">
-            <RouterLink to="/">{{ $t("nav.home") }}</RouterLink>
-          </li>
-          <li class="nav-inline blue">
-            <RouterLink to="/about">{{ $t("nav.about") }}</RouterLink>
-          </li>
-          <li class="nav-inline">
-            <select v-model="$i18n.locale">
-              <option
-                v-for="locale in $i18n.availableLocales"
-                :key="`locale-${locale}`"
-                :value="locale"
-              >
-                {{ locale }}
-              </option>
-            </select>
-          </li>
-        </ol>
-      </nav>
-    </div>
+    <nav class="nav-inline">
+      <ol>
+        <li class="nav-inline blue">
+          <RouterLink to="/">{{ $t("nav.home") }}</RouterLink>
+        </li>
+        <li class="nav-inline blue">
+          <RouterLink to="/about">{{ $t("nav.about") }}</RouterLink>
+        </li>
+        <li class="nav-inline">
+          <select v-model="$i18n.locale">
+            <option
+              v-for="locale in $i18n.availableLocales"
+              :key="`locale-${locale}`"
+              :value="locale"
+            >
+              {{ locale }}
+            </option>
+          </select>
+        </li>
+      </ol>
+    </nav>
   </header>
 
   <RouterView />
@@ -35,7 +33,7 @@ import { RouterLink, RouterView } from "vue-router";
 <style scoped>
 header {
   line-height: 1;
-  max-height: 100vh;
+  max-height: 10vh;
 }
 .blue {
   color: rgb(13, 81, 127);
@@ -43,6 +41,7 @@ header {
 }
 
 .nav-inline {
+  margin-top: 0px;
   display: inline-block;
 }
 nav {

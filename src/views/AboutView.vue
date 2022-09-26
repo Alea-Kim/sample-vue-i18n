@@ -12,13 +12,14 @@
 <script></script>
 <style>
 body {
-  padding: 30px;
+  padding: 10px;
   line-height: 2;
 }
 img {
   max-width: 500px;
 }
 .about {
+  margin-top: 100px;
   min-height: 60vh;
   position: relative;
   display: flex;

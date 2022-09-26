@@ -35,7 +35,7 @@ export const messages = {
       dio: "モネさん:",
       linked: "@:home.dio @:home.hello_world !!!!",
       email: "メール：food{'@'}domain", // literal interpolation
-      homeAddress: "〒 {zipCode} {street} へ届きますね。",
+      homeAddress: "〒 {zipCode} {street} へ届くまで御機嫌よう",
       homeGreeting: "初めまして, {name}。", //named interpolation
       missingHomeAddress: "下記の住所は必須です",
       word_zipcode: "郵便番号",
