@@ -2,8 +2,8 @@
   <main>
     <div class="child-container">
       <div>
-        <h3>Monthly Postcard Subscription</h3>
-        Postcard Design:
+        <h3 class="blue">{{ $t("home.title") }}</h3>
+        {{ $t("home.word_sample") }}:
         <div class="the-post-card">
           <img src="@/assets/images/coverphoto.jpeg" />
           <span v-if="name" class="display-info">
@@ -25,10 +25,8 @@
             </span>
           </span>
         </div>
-        <h4>Who are you?</h4>
         <span>{{ $t("home.word_name") }}: <input v-model="name" /></span>
 
-        <h4>Where in the world are you?</h4>
         <div>
           <span
             >{{ $t("home.word_zipcode") }}: <input v-model="zipCode"
@@ -40,14 +38,14 @@
         </div>
         <br />
         <span class="error-msg" v-if="!(zipCode && streetAddress)">
-          {{ $t("home.missingHomeAddress") }}
+          {{ $t("home.err_msg_missingHomeAddress") }}
         </span>
-        <h4>Date of arrival</h4>
+        <h4>{{ $t("home.word_dateArrival") }}</h4>
         <p class="blue">※ {{ $d(new Date(), "short", $i18n.locale) }}</p>
         <p class="blue">※ {{ $d(new Date(), "long", $i18n.locale) }}</p>
       </div>
       <div>
-        <h4>Monthly Price</h4>
+        <h4>{{ $t("home.word_price") }}</h4>
         <p class="blue">{{ $n(5000, "currency", $i18n.locale) }}</p>
         <!-- <p class="blue">
           {{ $n(10000, "currency", $i18n.locale, { useGrouping: false }) }}
@@ -62,6 +60,7 @@
         </p>
         <p class="blue">{{ $n(12145281111, "decimal", $i18n.locale) }}</p> -->
       </div>
+      <hr />
       <div>
         <h4>Possible Message Format (i18n)</h4>
         <p>
@@ -70,12 +69,14 @@
         </p>
         <p>
           ※ NAMED interpolation:
-          <span class="blue">{{ $t("home.hello", { msg: "HEY" }) }}</span>
+          <span class="blue">{{
+            $t("home.hello", { msg: "This is a variable" })
+          }}</span>
         </p>
         <p>
           ※ LIST interpolation:
           <span class="blue">{{
-            $t("home.hello_list", ["HELLO", "ALOHA", "KONNICHIHA"])
+            $t("home.hello_list", ["VAR1", "VAR2", "VAR3"])
           }}</span>
         </p>
         <p>
